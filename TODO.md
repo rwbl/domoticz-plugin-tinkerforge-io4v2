@@ -1,4 +1,4 @@
-# Changelog domoticz-plugin-tf-io4v2
+# Changelog domoticz-plugin-tinkerforge-io4v2
  
 ### NEW: Parameter to set input channel callback period
 The callback period for channels configured as input pull-up, is hardcoded set by 250ms.
