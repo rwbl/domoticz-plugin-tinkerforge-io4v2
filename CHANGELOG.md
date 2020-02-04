@@ -1,4 +1,4 @@
 # Changelog domoticz-plugin-tf-io4-v2
 
-### v0.01 (Build 20200131)
-* NEW: Started exploring
+### v1.0.0 (Build 20200204)
+* NEW: First version published.
