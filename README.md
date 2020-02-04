@@ -13,9 +13,7 @@ A Domoticz Python plugin named "Tinkerforge IO-4 Bricklet 2.0" with 4 devices ty
 The Tinkerforge IO-4 Bricklet 2.0 is connected to a Tinkerforge Master Brick direct connected via USB with the Domoticz Home Automation system.
 The Domoticz Home Automation system is running on a Raspberry Pi.
 
-ADD PICTURE TEST SETUP
-
-![](.png)
+![domoticz-plugin-tinkerforge-io4v2-o](https://user-images.githubusercontent.com/47274144/73728010-d672b500-4732-11ea-805a-8d9a87ab72ee.png)
 
 Additional info **domoticz-plugin-tinkerforge-io4v2.pdf**.
 
@@ -44,48 +42,53 @@ The IO-4 Bricklet 2.0 has two channels (out of the four) in use and configured a
 * Channel 0 = Output: LED
 * Channel 1 = Input: Push-button
 
-On the Raspberry Pi, it is mandatory to install the Tinkerforge Brick Daemon and Brick Viewer following [these](https://www.tinkerforge.com/en/doc/Embedded/Raspberry_Pi.html) installation instructions (Raspian armhf).
+On the Raspberry Pi, it is mandatory to install the Tinkerforge Brick Daemon and Brick Viewer following [these](https://www.tinkerforge.com/en/doc/Embedded/Raspberry_Pi.html) installation instructions (for Raspian armhf).
 
-Build the test setup by connecting the Tinkerforge Building Blocks:
-* IO-4 Bricklet 2.0 > LED to Channel 0 > Push-button to Channel 1
+Build the test setup by connecting the Tinkerforge Building Blocks and the LED & Push-button to the IO-4 pins (channels):
+* IO-4 Bricklet 2.0 Channel 0 > LED (Pins: + = 0, - = GND 0)
+* IO-4 Bricklet 2.0 Channel 1 > Push-button (Pins: + = 3.3V, - = GND 1, Signal = 1)
 * IO-4 Bricklet 2.0 > Master Brick using bricklet cable 7p-10p (because using a Master Brick with 10p connectors and the IO-4 Bricklet 2.0 has the newer 7p connector).
 * Master Brick > USB cable to Raspberry Pi
 
 Start the Brick Viewer and action:
 * Update the devices firmware
-* Obtain the UID of the IO-4 Bricklet 2.0 as required by the Python plugin (i.e. G4d).
+* Obtain the UID of the IO-4 Bricklet 2.0 as required by the plugin (i.e. G4d).
 
 ## Domoticz Web GUI
 Open windows GUI Setup > Hardware, GUI Setup > Log, GUI Setup > Devices
 This is required to add the new hardware with its device and monitor if the plugin code is running without errors.
+It is imporant, that the GUI > Setup > Hardware accepts new devices!
 
 ## Create folder
+The folder name is the same as the key property of the plugin (i.e. plugin key="TFIO4V2").
 ```
 cd /home/pi/domoticz/plugins/TFIO4V2
 ```
 
 ## Create the plugin
-The plugin has a mandatory filename plugin.py located in the newly created plugin folder
+The plugin has a mandatory filename **plugin.py** located in the created plugin folder.
 Domoticz Python Plugin Source Code: see file **plugin.py**.
 
 ## Install the Tinkerforge Python API
-There are two options:
+There are two options.
 
 ### 1) sudo pip3 install tinkerforge
 Advantage: in case of binding updates, only a single folder must be updated.
 Check if a subfolder tinkerforge is created in folder /usr/lib/python3/dist-packages.
-_Note_: Check the version of "python3" in the folder path. This could also be python 3.7 or other = see below.
+**Note**
+Check the version of "python3" in the folder path. This could also be python 3.7 or other = see below.
 
-**If not the case**, unzip the Tinkerforge Python Binding into the folder /usr/lib/python3/dist-packages.
+**If for some reason the bindings are not installed**
+Unzip the Tinkerforge Python Binding into the folder /usr/lib/python3/dist-packages.
 _Example_
-  Create subfolder Tinkerforge holding the Tinkerforge Python Library
+Create subfolder Tinkerforge holding the Tinkerforge Python Library
 ```
-  cd /home/pi/tinkerforge
+cd /home/pi/tinkerforge
 ```
-  Unpack the latest python bindings into folder /home/pi/tinkerforge
-  Copy /home/pi/tinkerforge to the Python3 dist-packges
+Unpack the latest python bindings into folder /home/pi/tinkerforge
+Copy /home/pi/tinkerforge to the Python3 dist-packges
 ```
-  sudo cp -r /home/pi/tinkerforge /usr/lib/python3/dist-packages/
+sudo cp -r /home/pi/tinkerforge /usr/lib/python3/dist-packages/
 ```
 
 In the Python Plugin code amend the import path to enable using the Tinkerforge libraries
@@ -109,7 +112,8 @@ import tinkerforge
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_io4_v2 import BrickletIO4V2
 ```
-add more depending Tinkerforge brick/bricklet used.
+**Note**
+Add more bindings depending Tinkerforge bricks & bricklets used.
 
 Ensure to update the files in case of newer Tinkerforge Python Bindings.
 
@@ -140,8 +144,7 @@ In the GUI Setup > Hardware add the new hardware "Tinkerforge IO-4 Bricklet 2.0"
 ## Add Hardware - Check the Domoticz Log
 After adding,ensure to check the Domoticz Log (GUI Setup > Log)
 
-ADD DOMOTICZ ADD HARDWARE PIC
-![...-h](.png)
+![domoticz-plugin-tinkerforge-io4v2-h](https://user-images.githubusercontent.com/47274144/73728004-d4105b00-4732-11ea-9e9f-3243452b826f.png)
 
 _Example:_
 ```
