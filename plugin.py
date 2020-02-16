@@ -1,4 +1,4 @@
-# Domoticz Home Automation - Plugin Tinkerforge Bricklet IO4-v2
+# Domoticz Home Automation - Plugin Tinkerforge IO-4 Bricklet 2.0
 # @author Robert W.B. Linn
 # @version 1.0.0 (Build 20200203)
 #
@@ -8,20 +8,20 @@
 #
 # Domoticz Python Plugin Development Documentation:
 # https://www.domoticz.com/wiki/Developing_a_Python_plugin
-# Tinkerforge IO4-v2 Bricklet Documentation:
+# Tinkerforge IO-4 Bricklet 2.0 Documentation:
 # Hardware:
 # https://www.tinkerforge.com/en/doc/Hardware/Bricklets/IO4_V2.html#io4-v2-bricklet-description
 # API Python Documentation:
 # https://www.tinkerforge.com/en/doc/Software/Bricklets/IO4V2_Bricklet_Python.html#io4-v2-bricklet-python-api
 
 """
-<plugin key="TFIO4V2" name="Tinkerforge IO-4 Bricklet 2.0" author="rwbL" version="1.0.0">
+<plugin key="tfio4v2" name="Tinkerforge IO-4 Bricklet 2.0" author="rwbL" version="1.0.0">
     <description>
         <h2>Tinkerforge IO-4 Bricklet 2.0</h2><br/>
         This bricklet has 4 I/O pins (channels) which can be configured as digital input or output.<br/>
         For each channel:<br/>
         <ul style="list-style-type:square">
-            <li>Domoticz device is created from Type: Light/Switch, SubType: Switch, Switch Type: On/Off.</li>
+            <li>Domoticz device created is from Type: Light/Switch, SubType: Switch, Switch Type: On/Off.</li>
             <li>Set the direction:
                 <ul style="list-style-type:square">
                     <li>Output 'o' (i.e. LED which can be turned on or off) or</li>
@@ -72,7 +72,7 @@ import urllib.request
 # Amend the import path to enable using the Tinkerforge libraries
 # Alternate (ensure to update in case newer Python API bindings):
 # create folder tinkerforge and copy the binding content, i.e.
-# /home/pi/domoticz/plugins/domoticz-plugin-tf-io4-v2
+# /home/pi/domoticz/plugins/tfio4v2
 from os import path
 import sys
 sys.path

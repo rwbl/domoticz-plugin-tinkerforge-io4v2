@@ -60,9 +60,9 @@ This is required to add the new hardware with its device and monitor if the plug
 It is imporant, that the GUI > Setup > Hardware accepts new devices!
 
 ## Create folder
-The folder name is the same as the key property of the plugin (i.e. plugin key="TFIO4V2").
+The folder name is the same as the key property of the plugin (i.e. plugin key="tfio4v2").
 ```
-cd /home/pi/domoticz/plugins/TFIO4V2
+cd /home/pi/domoticz/plugins/tfio4v2
 ```
 
 ## Create the plugin
@@ -119,7 +119,7 @@ Ensure to update the files in case of newer Tinkerforge Python Bindings.
 
 ## Make plugin.py executable
 ```
-cd /home/pi/domoticz/plugins/TFIO4V2
+cd /home/pi/domoticz/plugins/tfio4v2
 chmod +x plugin.py
 ```
 
@@ -151,50 +151,50 @@ _Example:_
 ```
 ## Domoticz Log Entry Adding Hardware with Debug=True
 ```
-2020-02-02 10:43:52.694 Status: (TFIO4V2) Started. 
-2020-02-02 10:43:53.174 (TFIO4V2) Debug logging mask set to: PYTHON PLUGIN QUEUE IMAGE DEVICE CONNECTION MESSAGE ALL 
-2020-02-02 10:43:53.174 (TFIO4V2) 'HardwareID':'7' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'HomeFolder':'/home/pi/domoticz/plugins/TFIO4V2/' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'StartupFolder':'/home/pi/domoticz/' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'UserDataFolder':'/home/pi/domoticz/' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Database':'/home/pi/domoticz/domoticz.db' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Language':'en' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Version':'1.0.0' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Author':'rwbL' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Name':'TFIO4V2' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Address':'127.0.0.1' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Port':'4223' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Key':'TFIO4V2' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Mode1':'G4d' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Mode2':'o,i,o,o' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Mode3':'1,0,0,0' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'Mode6':'Debug' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'DomoticzVersion':'4.11666' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'DomoticzHash':'3630122d7' 
-2020-02-02 10:43:53.174 (TFIO4V2) 'DomoticzBuildTime':'2020-01-31 08:45:14' 
-2020-02-02 10:43:53.174 (TFIO4V2) Device count: 0 
-2020-02-02 10:43:53.174 (TFIO4V2) ChannelDirections:o,i,o,o 
-2020-02-02 10:43:53.174 (TFIO4V2) ChannelValues:1,0,0,0 
-2020-02-02 10:43:53.174 (TFIO4V2) Creating new Devices 
-2020-02-02 10:43:53.175 (TFIO4V2) Creating device 'IO4 Channel 0'. 
-2020-02-02 10:43:53.176 (TFIO4V2) Device created: TFIO4V2 - IO4 Channel 0 
-2020-02-02 10:43:53.176 (TFIO4V2) Creating device 'IO4 Channel 1'. 
-2020-02-02 10:43:53.177 (TFIO4V2) Device created: TFIO4V2 - IO4 Channel 1 
-2020-02-02 10:43:53.177 (TFIO4V2) Creating device 'IO4 Channel 2'. 
-2020-02-02 10:43:53.178 (TFIO4V2) Device created: TFIO4V2 - IO4 Channel 2 
-2020-02-02 10:43:53.178 (TFIO4V2) Creating device 'IO4 Channel 3'. 
-2020-02-02 10:43:53.179 (TFIO4V2) Device created: TFIO4V2 - IO4 Channel 3 
-2020-02-02 10:43:53.183 (TFIO4V2) IP Connection - OK 
-2020-02-02 10:43:53.183 (TFIO4V2) Connected to the Master Brick. 
-2020-02-02 10:43:53.183 (TFIO4V2) Configure channels. 
-2020-02-02 10:43:53.184 (TFIO4V2) Channel=0, Direction=o, Value=True 
-2020-02-02 10:43:53.184 (TFIO4V2 - IO4 Channel 0) Updating device from 0:'' to have values 1:''. 
-2020-02-02 10:43:53.203 (TFIO4V2) Channel=1, Direction=i, Value=False 
-2020-02-02 10:43:53.206 (TFIO4V2) Channel=1 = Callback registered 
-2020-02-02 10:43:53.207 (TFIO4V2) Channel=2, Direction=o, Value=False 
-2020-02-02 10:43:53.207 (TFIO4V2) Channel=3, Direction=o, Value=False 
-2020-02-02 10:43:53.170 Status: (TFIO4V2) Initialized version 1.0.0, author 'rwbL' 
-2020-02-02 10:43:53.170 Status: (TFIO4V2) Entering work loop. 
+2020-02-02 10:43:52.694 Status: (tfio4v2) Started. 
+2020-02-02 10:43:53.174 (tfio4v2) Debug logging mask set to: PYTHON PLUGIN QUEUE IMAGE DEVICE CONNECTION MESSAGE ALL 
+2020-02-02 10:43:53.174 (tfio4v2) 'HardwareID':'7' 
+2020-02-02 10:43:53.174 (tfio4v2) 'HomeFolder':'/home/pi/domoticz/plugins/tfio4v2/' 
+2020-02-02 10:43:53.174 (tfio4v2) 'StartupFolder':'/home/pi/domoticz/' 
+2020-02-02 10:43:53.174 (tfio4v2) 'UserDataFolder':'/home/pi/domoticz/' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Database':'/home/pi/domoticz/domoticz.db' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Language':'en' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Version':'1.0.0' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Author':'rwbL' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Name':'tfio4v2' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Address':'127.0.0.1' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Port':'4223' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Key':'tfio4v2' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Mode1':'G4d' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Mode2':'o,i,o,o' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Mode3':'1,0,0,0' 
+2020-02-02 10:43:53.174 (tfio4v2) 'Mode6':'Debug' 
+2020-02-02 10:43:53.174 (tfio4v2) 'DomoticzVersion':'4.11666' 
+2020-02-02 10:43:53.174 (tfio4v2) 'DomoticzHash':'3630122d7' 
+2020-02-02 10:43:53.174 (tfio4v2) 'DomoticzBuildTime':'2020-01-31 08:45:14' 
+2020-02-02 10:43:53.174 (tfio4v2) Device count: 0 
+2020-02-02 10:43:53.174 (tfio4v2) ChannelDirections:o,i,o,o 
+2020-02-02 10:43:53.174 (tfio4v2) ChannelValues:1,0,0,0 
+2020-02-02 10:43:53.174 (tfio4v2) Creating new Devices 
+2020-02-02 10:43:53.175 (tfio4v2) Creating device 'IO4 Channel 0'. 
+2020-02-02 10:43:53.176 (tfio4v2) Device created: tfio4v2 - IO4 Channel 0 
+2020-02-02 10:43:53.176 (tfio4v2) Creating device 'IO4 Channel 1'. 
+2020-02-02 10:43:53.177 (tfio4v2) Device created: tfio4v2 - IO4 Channel 1 
+2020-02-02 10:43:53.177 (tfio4v2) Creating device 'IO4 Channel 2'. 
+2020-02-02 10:43:53.178 (tfio4v2) Device created: tfio4v2 - IO4 Channel 2 
+2020-02-02 10:43:53.178 (tfio4v2) Creating device 'IO4 Channel 3'. 
+2020-02-02 10:43:53.179 (tfio4v2) Device created: tfio4v2 - IO4 Channel 3 
+2020-02-02 10:43:53.183 (tfio4v2) IP Connection - OK 
+2020-02-02 10:43:53.183 (tfio4v2) Connected to the Master Brick. 
+2020-02-02 10:43:53.183 (tfio4v2) Configure channels. 
+2020-02-02 10:43:53.184 (tfio4v2) Channel=0, Direction=o, Value=True 
+2020-02-02 10:43:53.184 (tfio4v2 - IO4 Channel 0) Updating device from 0:'' to have values 1:''. 
+2020-02-02 10:43:53.203 (tfio4v2) Channel=1, Direction=i, Value=False 
+2020-02-02 10:43:53.206 (tfio4v2) Channel=1 = Callback registered 
+2020-02-02 10:43:53.207 (tfio4v2) Channel=2, Direction=o, Value=False 
+2020-02-02 10:43:53.207 (tfio4v2) Channel=3, Direction=o, Value=False 
+2020-02-02 10:43:53.170 Status: (tfio4v2) Initialized version 1.0.0, author 'rwbL' 
+2020-02-02 10:43:53.170 Status: (tfio4v2) Entering work loop. 
 ```
 
 ## Notes
